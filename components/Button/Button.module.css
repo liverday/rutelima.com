@@ -4,6 +4,7 @@
   min-width: 3rem;
   padding: var(--padding-xs) var(--padding-lg);
   transition: filter 0.3s ease;
+  font-size: var(--text-size);
 }
 
 .button:hover {
