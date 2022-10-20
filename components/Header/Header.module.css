@@ -1,0 +1,33 @@
+.container {
+	width: 100%;
+	padding: var(--padding-lg) 0;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu {
+	display: flex;
+	gap: var(--gap-lg);
+	list-style: none;
+	margin: 0;
+	align-items: center;
+}
+
+.menuItem {
+	border-bottom: var(--border-white);
+	opacity: 0.3;
+	font-weight: bold;
+	font-size: 0.75rem;
+}
+
+.menuItem:hover {
+	transition: opacity 0.35s ease;
+	opacity: 1;
+}
+
+.menuItemActive {
+	opacity: 1;
+}

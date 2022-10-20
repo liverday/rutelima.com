@@ -1,0 +1,53 @@
+.brandContainer {
+  display: flex;
+  margin-top: calc(var(--spacing-lg) * 4);
+}
+
+.brandTextContainer {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.brandTitle {
+  font-size: var(--text-size-title);
+  line-height: 4rem;
+  text-align: center;
+}
+
+.specialist {
+  position: relative;
+}
+
+.specialist::after {
+  position: absolute;
+  content: '';
+  height: 1.5rem;
+  width: 100%;
+  z-index: -1;
+  background-color: var(--primary);
+  left: 0.25rem;
+  bottom: 0.5rem;
+}
+
+.brandSubtitle {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  font-weight: 300;
+  font-size: calc(var(--text-size) * 1.5);
+}
+
+@media(min-width: 768px) {
+  .brandTextContainer {
+    display: block;
+    flex: 1;
+  }
+
+  .brandTitle {
+    text-align: initial;
+  }
+
+  .brandSubtitle {
+    text-align: initial;
+  }
+}

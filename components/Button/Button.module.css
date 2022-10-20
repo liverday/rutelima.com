@@ -1,0 +1,12 @@
+.button {
+  border: 0;
+  border-radius: 1rem;
+  min-width: 3rem;
+  padding: var(--padding-xs) var(--padding-lg);
+  transition: filter 0.3s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+  filter: brightness(1.05);
+}
