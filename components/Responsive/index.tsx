@@ -6,7 +6,7 @@ type Props = {
   children?: React.ReactNode;
 }
 
-const Wrapper: React.FC<Props> = ({ children }) => <div>{children}</div>
+const Wrapper: React.FC<Props> = ({ children }) => <>{children}</>
 
 const withResponsive = (Component: ComponentType<Props>): React.FC<Props> => {
   return (props) => {
