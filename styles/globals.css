@@ -7,7 +7,7 @@
   --accent-text-color: #fff;
 
   --text-size-title: 3.5rem;
-  --text-size: 0.875rem;
+  --text-size: 1rem;
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -17,7 +17,7 @@
   --padding-sm: var(--spacing-sm);
   --padding-lg: var(--spacing-lg);
 
-  --max-width: 80%;
+  --max-width: 70%;
 
   --border-light: 1px solid #fff;
   --border-primary: 1px solid var(--primary);

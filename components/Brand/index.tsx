@@ -27,7 +27,7 @@ const Brand: React.FC = () => {
               personalizado para o seu tipo de cabelo!
             </R.LessThanMobile>
           </h2>
-          <Button className="margin-top-lg" variant="primary">Agende seu horário</Button>
+          <Button className={styles.appointmentButton} variant="primary">Agende seu horário</Button>
         </div>
 
       </Layout>
