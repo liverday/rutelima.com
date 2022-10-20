@@ -11,6 +11,7 @@
 
 .brandTitle {
   font-size: var(--text-size-title);
+  line-height: calc(var(--text-size-title) * 1.25);
   text-align: center;
 }
 
