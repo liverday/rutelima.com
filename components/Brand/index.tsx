@@ -11,9 +11,8 @@ const Brand: React.FC = () => {
       <Layout className={styles.brandContainer}>
         <div className={styles.brandTextContainer}>
           <h1 className={styles.brandTitle}>
-            Seu salão <br />
-            <span className={styles.specialist}>especialista</span> <br />
-            em <span className={styles.specialist}>loiros</span>
+            Especialista <br />
+            em <span className={styles.specialist}>Mega Hair</span> <br />e <span className={styles.specialist}>loiros</span> 
           </h1>
           <h2 className={styles.brandSubtitle}>
             <R.GreaterThanTablet>
