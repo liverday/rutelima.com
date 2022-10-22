@@ -1,12 +1,14 @@
 .brandContainer {
   display: flex;
-  margin-top: calc(var(--spacing-lg) * 4);
+  margin-top: calc(var(--spacing-lg) * 6);
+  gap: var(--spacing-lg);
 }
 
 .brandTextContainer {
   display: flex;
   align-items: center;
   flex-flow: column;
+  flex: 2;
 }
 
 .brandTitle {
@@ -41,6 +43,30 @@
   margin-top: var(--spacing-lg);
   width: 15rem;
 }
+
+.brandImagesContainer {
+  flex: 1;
+}
+
+.mosaic {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  gap: var(--spacing-sm);
+  margin-top: calc(var(--spacing-lg) * -4);
+}
+
+.mosaicImageContainer {
+  width: 100%;
+  height: 18rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+
 
 @media(min-width: 768px) {
   .brandTextContainer {

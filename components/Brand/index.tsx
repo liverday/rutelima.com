@@ -1,7 +1,14 @@
+import Image from 'next/image';
 import React from 'react';
 import { Button } from '../Button';
 import Layout from '../Layout';
 import * as R from '../Responsive';
+
+import blondeBrand from '../../public/images/mosaic/brand-image.jpeg';
+import blondeOne from '../../public/images/mosaic/blonde-one.jpeg';
+import blondeTwo from '../../public/images/mosaic/blonde-two.jpeg';
+import blondeThree from '../../public/images/mosaic/blonde-three.jpeg';
+
 
 import styles from './Brand.module.css';
 
@@ -9,11 +16,11 @@ const Brand: React.FC = () => {
   return (
     <section>
       <Layout className={styles.brandContainer}>
-        <div className={styles.brandTextContainer}>
+        <article className={styles.brandTextContainer}>
           <h1 className={styles.brandTitle}>
             Especialista <R.GreaterThanTablet><br /></R.GreaterThanTablet>
-            em <span className={styles.specialist}>loiros</span> 
-            <R.GreaterThanTablet><br /></R.GreaterThanTablet> e <span className={styles.specialist}>mega-hair</span> 
+            em <span className={styles.specialist}>loiros</span>
+            <R.GreaterThanTablet><br /></R.GreaterThanTablet> e <span className={styles.specialist}>mega-hair</span>
           </h1>
           <h2 className={styles.brandSubtitle}>
             <R.GreaterThanTablet>
@@ -28,7 +35,38 @@ const Brand: React.FC = () => {
             </R.LessThanMobile>
           </h2>
           <Button className={styles.appointmentButton} variant="primary">Agende seu horário</Button>
-        </div>
+        </article>
+        <R.LessThanMobile>
+          
+        </R.LessThanMobile>
+
+        <R.GreaterThanDesktop>
+          <div className={styles.brandImagesContainer}>
+
+            <div className={styles.mosaic}>
+              <div className={styles.mosaicImageContainer}>
+                <Image src={blondeBrand} objectFit="fill" layout="fill"
+                  alt="A blonde woman showing the hair that she worked on"
+                />
+              </div>
+              <div className={styles.mosaicImageContainer}>
+                <Image src={blondeTwo} objectFit="fill" layout="fill"
+                  alt="A blonde customer woman showing her hair after the styling"
+                />
+              </div>
+              <div className={styles.mosaicImageContainer}>
+                <Image src={blondeOne} objectFit="fill" layout="fill"
+                  alt="A blonde customer woman showing her hair after the styling"
+                />
+              </div>
+              <div className={styles.mosaicImageContainer}>
+                <Image src={blondeThree} objectFit="fill" layout="fill"
+                  alt="A blonde customer woman showing her hair after the styling"
+                />
+              </div>
+            </div>
+          </div>
+        </R.GreaterThanDesktop>
 
       </Layout>
     </section>
