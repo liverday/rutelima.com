@@ -17,14 +17,14 @@ type LinksPageProps = {
 const LinksPage: NextPage<LinksPageProps> = ({ links }) => {
   return (
     <main className="main">
-      <Layout>
+      <Layout className={styles.layout}>
         <div className={styles.container}>
           <section className={styles.header}>
             <Logo />
 
             <h1 className={styles.name}>Rute Lima</h1>
             <h2 className={styles.description}>
-              Especialista em loiros e mega-hair, te atendo usando as melhores técnicas do mercado.
+              💇🏼‍♀️ Especialista em loiros e mega-hair, te atendo usando as melhores técnicas do mercado.
             </h2>
           </section>
 

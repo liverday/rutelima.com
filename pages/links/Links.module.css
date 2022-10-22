@@ -1,13 +1,19 @@
+
+
 .container {
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
   width: 100%;
-  padding: var(--padding-lg);
-  margin-top: var(--spacing-lg);
+  padding: var(--padding-xs);
+  margin-top: calc(var(--spacing-lg) * 2);
 }
 
-.header {}
+.header {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
 
 .name {
   text-align: center;
@@ -21,6 +27,7 @@
   margin-top: var(--spacing-lg);
   font-weight: 300;
   font-size: calc(var(--text-size) * 1.25);
+  color: var(--gray);
 }
 
 .linksContainer {
@@ -35,10 +42,25 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.02);
 }
 
 .linkText {
   flex: 1;
   display: block;
   text-align: center;
+}
+
+@media (min-width: 992px) {
+  .layout {
+    max-width: var(--max-width-mobile);
+  }
+
+  .container { 
+    padding: var(--padding-lg);
+  }
 }
