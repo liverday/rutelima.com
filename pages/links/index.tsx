@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,8 +11,17 @@ import { getLinks, Link as LinkType } from '../api/links';
 import styles from './Links.module.css';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
+import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 type LinksPageProps = {
   links: LinkType[];
+}
+
+const linkIcons: {
+  [key: string]: IconProp
+} = {
+  instagram: faInstagram,
+  whatsapp: faWhatsapp
 }
 
 const LinksPage: NextPage<LinksPageProps> = ({ links }) => {
@@ -24,17 +34,19 @@ const LinksPage: NextPage<LinksPageProps> = ({ links }) => {
 
             <h1 className={styles.name}>Rute Lima</h1>
             <h2 className={styles.description}>
-              💇🏼‍♀️ Especialista em loiros e mega-hair, te atendo usando as melhores técnicas do mercado.
+              💇🏼‍♀️ Especialista em loiros e mega&#8209;hair, te atendo usando as melhores técnicas do mercado.
             </h2>
           </section>
 
           <section className={styles.linksContainer}>
             {links.map(link => (
               <Link key={link.id} href={link.href} passHref>
-                <Button variant="primary" className={styles.link}>
-                  <FontAwesomeIcon className="margin-right-lg" icon={link.icon as IconProp} /> 
-                  <p className={styles.linkText}>{link.title}</p>
-                </Button>
+                <a style={{ width: '100%'}} target="_blank">
+                  <Button variant="primary" className={styles.link}>
+                    <FontAwesomeIcon size="2x" className="margin-right-lg" icon={linkIcons[link.icon]} />
+                    <p className={styles.linkText}>{link.title}</p>
+                  </Button>
+                </a>
               </Link>
             ))}
           </section>
@@ -47,7 +59,7 @@ const LinksPage: NextPage<LinksPageProps> = ({ links }) => {
 
 export default LinksPage;
 
-export const getServerSideProps: GetServerSideProps = async () =>  {
+export const getServerSideProps: GetServerSideProps = async () => {
   const links = await getLinks();
 
   return {

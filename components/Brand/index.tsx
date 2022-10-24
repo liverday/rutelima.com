@@ -20,7 +20,7 @@ const Brand: React.FC = () => {
           <h1 className={styles.brandTitle}>
             Especialista <R.GreaterThanTablet><br /></R.GreaterThanTablet>
             em <span className={styles.specialist}>loiros</span>
-            <R.GreaterThanTablet><br /></R.GreaterThanTablet> e <span className={styles.specialist}>mega-hair</span>
+            <R.GreaterThanTablet><br /></R.GreaterThanTablet> e <span className={styles.specialist}>mega&#8209;hair</span>
           </h1>
           <h2 className={styles.brandSubtitle}>
             <R.GreaterThanTablet>

@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export type Link = {
   id: number,
   title: string,
-  icon: string[]
+  icon: string
   href: string
 }
 
@@ -12,13 +12,13 @@ const allMyLinks: Link[] = [
   {
     id: 1,
     title: 'Agende um horário',
-    icon: ['fab', 'whatsapp'],
+    icon: 'whatsapp',
     href: 'https://api.whatsapp.com/send?phone=5511932253838'
   },
   {
     id: 2,
     title: 'Instagram',
-    icon: ['fab', 'instagram'],
+    icon: 'instagram',
     href: 'https://www.instagram.com/ruutelimaa'
   },
 ]

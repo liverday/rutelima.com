@@ -3,9 +3,10 @@ import classnames from "classnames";
 
 import styles from './Button.module.css';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children?: React.ReactNode;
   variant: 'primary' | 'accent';
+  ref?: React.Ref<any>
 }
 
 const colorsMap: {
