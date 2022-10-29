@@ -12,6 +12,7 @@ import styles from './Links.module.css';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import Head from 'next/head';
 
 type LinksPageProps = {
   links: LinkType[];
@@ -26,34 +27,37 @@ const linkIcons: {
 
 const LinksPage: NextPage<LinksPageProps> = ({ links }) => {
   return (
-    <main className="main">
-      <Layout className={styles.layout}>
-        <div className={styles.container}>
-          <section className={styles.header}>
-            <Logo />
+    <>
+      <Head>
+        <title>Rute Lima - Loiros e Mega-hair</title>
+      </Head>
+      <main className="main">
+        <Layout className={styles.layout}>
+          <div className={styles.container}>
+            <section className={styles.header}>
+              <Logo />
 
-            <h1 className={styles.name}>Rute Lima</h1>
-            <h2 className={styles.description}>
-              💇🏼‍♀️ Especialista em loiros e mega&#8209;hair, te atendo usando as melhores técnicas do mercado.
-            </h2>
-          </section>
+              <h1 className={styles.name}>Rute Lima</h1>
+              <h2 className={styles.description}>
+                💇🏼‍♀️ Especialista em loiros e mega&#8209;hair, te atendo usando as melhores técnicas do mercado.
+              </h2>
+            </section>
 
-          <section className={styles.linksContainer}>
-            {links.map(link => (
-              <Link key={link.id} href={link.href} passHref>
-                <a style={{ width: '100%'}} target="_blank">
+            <section className={styles.linksContainer}>
+              {links.map(link => (
+                <Link key={link.id} href={link.href} target="_blank">
                   <Button variant="primary" className={styles.link}>
                     <FontAwesomeIcon size="2x" className="margin-right-lg" icon={linkIcons[link.icon]} />
                     <p className={styles.linkText}>{link.title}</p>
                   </Button>
-                </a>
-              </Link>
-            ))}
-          </section>
+                </Link>
+              ))}
+            </section>
 
-        </div>
-      </Layout>
-    </main>
+          </div>
+        </Layout>
+      </main>
+    </>
   )
 }
 

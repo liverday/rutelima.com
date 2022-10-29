@@ -9,10 +9,14 @@ import blondeOne from '../../public/images/mosaic/blonde-one.jpeg';
 import blondeTwo from '../../public/images/mosaic/blonde-two.jpeg';
 import blondeThree from '../../public/images/mosaic/blonde-three.jpeg';
 
-
 import styles from './Brand.module.css';
+import Link from 'next/link';
 
-const Brand: React.FC = () => {
+type BrandProps = {
+  appointmentHref: string
+};
+
+const Brand: React.FC<BrandProps> = ({ appointmentHref }) => {
   return (
     <section>
       <Layout className={styles.brandContainer}>
@@ -34,10 +38,12 @@ const Brand: React.FC = () => {
               personalizado para o seu tipo de cabelo!
             </R.LessThanMobile>
           </h2>
-          <Button className={styles.appointmentButton} variant="primary">Agende seu horário</Button>
+          <Link href={appointmentHref} target="_blank">
+            <Button className={styles.appointmentButton} variant="primary">Agende seu horário</Button>
+          </Link>
         </article>
         <R.LessThanMobile>
-          
+
         </R.LessThanMobile>
 
         <R.GreaterThanDesktop>
@@ -45,22 +51,22 @@ const Brand: React.FC = () => {
 
             <div className={styles.mosaic}>
               <div className={styles.mosaicImageContainer}>
-                <Image src={blondeBrand} objectFit="fill" layout="fill"
+                <Image src={blondeBrand} className={styles.mosaicImage}
                   alt="A blonde woman showing the hair that she worked on"
                 />
               </div>
               <div className={styles.mosaicImageContainer}>
-                <Image src={blondeTwo} objectFit="fill" layout="fill"
+                <Image src={blondeTwo} className={styles.mosaicImage}
                   alt="A blonde customer woman showing her hair after the styling"
                 />
               </div>
               <div className={styles.mosaicImageContainer}>
-                <Image src={blondeOne} objectFit="fill" layout="fill"
+                <Image src={blondeOne} className={styles.mosaicImage}
                   alt="A blonde customer woman showing her hair after the styling"
                 />
               </div>
               <div className={styles.mosaicImageContainer}>
-                <Image src={blondeThree} objectFit="fill" layout="fill"
+                <Image src={blondeThree} className={styles.mosaicImage}
                   alt="A blonde customer woman showing her hair after the styling"
                 />
               </div>

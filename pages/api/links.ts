@@ -27,6 +27,10 @@ export async function getLinks(): Promise<Link[]> {
   return allMyLinks
 }
 
+export async function getWhatsappLink(): Promise<string> {
+  return allMyLinks[0].href;
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Link[]>
