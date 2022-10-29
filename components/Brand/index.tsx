@@ -50,26 +50,18 @@ const Brand: React.FC<BrandProps> = ({ appointmentHref }) => {
           <div className={styles.brandImagesContainer}>
 
             <div className={styles.mosaic}>
-              <div className={styles.mosaicImageContainer}>
-                <Image src={blondeBrand} className={styles.mosaicImage}
-                  alt="A blonde woman showing the hair that she worked on"
-                />
-              </div>
-              <div className={styles.mosaicImageContainer}>
-                <Image src={blondeTwo} className={styles.mosaicImage}
-                  alt="A blonde customer woman showing her hair after the styling"
-                />
-              </div>
-              <div className={styles.mosaicImageContainer}>
-                <Image src={blondeOne} className={styles.mosaicImage}
-                  alt="A blonde customer woman showing her hair after the styling"
-                />
-              </div>
-              <div className={styles.mosaicImageContainer}>
-                <Image src={blondeThree} className={styles.mosaicImage}
-                  alt="A blonde customer woman showing her hair after the styling"
-                />
-              </div>
+              <Image src={blondeBrand} className={styles.mosaicImage}
+                alt="A blonde woman showing the hair that she worked on"
+              />
+              <Image src={blondeTwo} className={styles.mosaicImage}
+                alt="A blonde customer woman showing her hair after the styling"
+              />
+              <Image src={blondeOne} className={styles.mosaicImage}
+                alt="A blonde customer woman showing her hair after the styling"
+              />
+              <Image src={blondeThree} className={styles.mosaicImage}
+                alt="A blonde customer woman showing her hair after the styling"
+              />
             </div>
           </div>
         </R.GreaterThanDesktop>

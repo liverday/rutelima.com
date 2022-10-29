@@ -7,6 +7,9 @@
   --accent-text-color: #fff;
   --gray: #bbb;
 
+  --logo-size-small: 4rem;
+  --logo-size: 8rem;
+
   --text-size-title: 2.5rem;
   --text-size: 0.875rem;
 
@@ -47,9 +50,8 @@
 }
 
 .main {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 a {

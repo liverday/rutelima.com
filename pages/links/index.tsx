@@ -35,7 +35,7 @@ const LinksPage: NextPage<LinksPageProps> = ({ links }) => {
         <Layout className={styles.layout}>
           <div className={styles.container}>
             <section className={styles.header}>
-              <Logo />
+              <Logo variant="large"/>
 
               <h1 className={styles.name}>Rute Lima</h1>
               <h2 className={styles.description}>

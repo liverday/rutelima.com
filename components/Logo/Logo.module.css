@@ -1,0 +1,15 @@
+.logo {
+  border-radius: 50%;
+  padding: 0.25rem;
+  border: 2px solid var(--primary);
+}
+
+.logoSmall {
+  width: var(--logo-size-small);
+  height: var(--logo-size-small);
+}
+
+.logoLarge {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}

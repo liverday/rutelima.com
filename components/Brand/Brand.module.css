@@ -1,6 +1,6 @@
 .brandContainer {
   display: flex;
-  margin-top: calc(var(--spacing-lg) * 6);
+  margin-top: var(--spacing-lg);
   gap: var(--spacing-lg);
 }
 
@@ -55,20 +55,12 @@
   grid-template-rows: 1fr 1fr;
   height: 100%;
   gap: var(--spacing-sm);
-  margin-top: calc(var(--spacing-lg) * -4);
-}
-
-.mosaicImageContainer {
-  width: 100%;
-  height: 18rem;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.5rem;
 }
 
 .mosaicImage {
   width: 100%;
   height: 100%;
+  border-radius: 0.5rem;
 }
 
 
@@ -77,6 +69,7 @@
   .brandTextContainer {
     display: block;
     flex: 1;
+    margin-top: calc(var(--spacing-lg) * 6);
   }
 
   .brandTitle {
