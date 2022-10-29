@@ -20,14 +20,14 @@ const Header: React.FC = () => {
 				title: 'Home',
 				href: '/'
 			},
-			// {
-			// 	title: 'Serviços',
-			// 	href: '/servicos'
-			// },
-			// {
-			// 	title: 'Contato',
-			// 	href: '/contato'
-			// }
+			{
+				title: 'Serviços',
+				href: '#'
+			},
+			{
+				title: 'Contato',
+				href: '#'
+			}
 		]
 	}, []);
 
